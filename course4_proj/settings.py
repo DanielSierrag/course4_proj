@@ -50,6 +50,7 @@ class Dev(Configuration):
       'django.contrib.messages',
       'django.contrib.staticfiles',
       'movies.apps.MoviesConfig',
+      'gh.apps.GhConfig'
   ]
 
   MIDDLEWARE = [
