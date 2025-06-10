@@ -50,7 +50,8 @@ class Dev(Configuration):
       'django.contrib.messages',
       'django.contrib.staticfiles',
       'movies.apps.MoviesConfig',
-      'gh.apps.GhConfig'
+      'gh.apps.GhConfig',
+      'django_celery_results',
   ]
 
   MIDDLEWARE = [
@@ -159,3 +160,6 @@ class Dev(Configuration):
       },
   }
   OMDB_KEY = 'b15dd27'
+
+  CELERY_RESULT_BACKEND = "django-db"
+  CELERY_BROKER_URL = "redis://localhost:6379/0"
